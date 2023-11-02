@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,viewport-fit=cover">
+		<meta name="mobile-web-app-capable" content="yes" >
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+	<title>
+		@@@TITLE
+	</title>
+	<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+
+	<script src="js/jquery-1.8.3.min.js"></script>
+	
+
+	<script scr="foundation/foundation.js"></script>
+	<script src="js/datepicker/datepicker.js"></script>
+<!--
+	<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+-->
+<link rel="stylesheet" href="css/my-style.css">
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<!--
+<script src="js/jquery-final.js"></script>
+-->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="js/valida-index.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400&display=swap" rel="stylesheet">
+
+
+<!-- Incluir Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+.arriba{
+	font-size: 15px;
+}
+
+.footer2{
+	text-align: center;
+	padding: 10px;
+}
+
+.centro{
+	text-align: center;
+}
+
+.transparente{
+	opacity: 0.95;
+	filter: alpha(opacity=100);
+   zoom: 1;
+}
+
+.separador{
+	padding-left: 10px;
+	padding-top: 8px;
+	padding-right: 8px;
+	padding-bottom: 10px;
+}
+
+
+.th-fixed {
+  background: #343a40;
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+}
+
+.hr {
+  border-color: #efefef;
+}
+
+.espacio-btn{
+	padding: 10px;
+	text-align: left;
+}
+
+
+	.bg{
+		background: rgb(2,0,36);
+		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(155,200,188,1) 0%, rgba(250,237,248,1) 43%);
+		color: #efefef;
+		font-family: 'Red Hat Display', sans-serif;
+		font-size: 14px;
+		background: #343a40;
+		
+		background: rgb(76,79,83);
+		background: linear-gradient(90deg, rgba(76,79,83,1) 0%, rgba(52,58,64,1) 50%);
+	}
+
+	.cuadro{
+		background-color:gainsboro;
+		border-radius: 10px;
+		padding: 30px;
+	}
+
+	.bloque{
+		text-align: left;
+		background-color: #404447;
+		
+		padding: 40px;
+		border-radius: 10px;
+		color: #efefef;
+		font-size: 14px;
+	}
+
+	.bloque2{
+		text-align: left;
+		background-color: #efefee;
+		width: 60%;
+		
+		padding: 40px;
+		border-radius: 10px;
+	}
+
+.izq{
+	text-align: left;
+}
+
+	.izquierda{
+		text-align: left;
+		padding: 30px;
+		background-color: #5a5c5e;
+		border-radius: 10px;
+		color: #efefee;
+	}
+
+	.derecha{
+		text-align: left;
+		padding: 30px;
+		background-color: #3e4042;
+		border-radius: 10px;
+		width: 90%;
+		color: #efefef;
+
+	}
+	
+	.outline-line-verde{
+		outline: 2px solid #77a377;
+		outline-offset: 2px;
+
+	}
+
+	.outline-line-gris{
+		outline: 2px solid #4b4f4c;
+		outline-offset: 2px;
+	}
+
+	.outline-line-rojo{
+		outline: 2px solid #de241b;
+		outline-offset: 2px;
+	}
+
+	.scroll{
+		height: 450px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		width: 100%;
+		
+	}
+	.scroll::-webkit-scrollbar {
+    width: 12px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+
+.scroll2{
+		height: 600px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		width: 100%;
+		
+	}
+	.scroll2::-webkit-scrollbar {
+    width: 12px;
+}
+
+.scroll2::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+.scroll2::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+
+.verde{
+	color: #56c954;
+	font-size: 12px;
+}
+
+.amarillo{
+	color: #edcf0b;
+	font-size: 12px;
+}
+
+.rojo{
+	color: #ed260b;
+	font-size: 12px;
+}
+
+.content{position: relative;width: 90%;max-width: 400px;margin: auto;overflow: hidden}
+.content .content-overlay{background: rgba(0,0,0,0.7);position: absolute;height: 99%;width: 100%;left: 0;top: 0;bottom: 0;right: 0;opacity: 0;-webkit-transition: all 0.4s ease-in-out 0s;-moz-transition: all 0.4s ease-in-out 0s;transition: all 0.4s ease-in-out 0s}.content:hover .content-overlay{opacity: 1}.content-image{width: 100%}img{border-radius: 5px}.content-details{position: absolute;text-align: center;padding-left: 1em;padding-right: 1em;width: 100%;top: 50%;left: 50%;opacity: 0;-webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);transform: translate(-50%, -50%);-webkit-transition: all 0.3s ease-in-out 0s;-moz-transition: all 0.3s ease-in-out 0s;transition: all 0.3s ease-in-out 0s}.content:hover .content-details{top: 50%;left: 50%;opacity: 1}.content-details h3{color: #fff;font-weight: 500;letter-spacing: 0.15em;margin-bottom: 0.5em;text-transform: uppercase}.content-details p{color: #fff;font-size: 0.8em}.fadeIn-bottom{top: 80%}
+
+.content-title{
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.archville{
+	width: 500px;
+	height: 150px;
+	background-color: #5a5c5e;
+	padding: 15px;
+	border-radius: 10px;
+	color: #efefee;
+}
+
+	/* ============ desktop view ============ */
+	@media all and (min-width: 992px) {
+	 .navbar .nav-item .dropdown-menu{ display: none; }
+	 /* .navbar .nav-item:hover .nav-link{ color: #fff;  } */
+	 .navbar .nav-item:hover .dropdown-menu{ display: block; }
+	 .navbar .nav-item .dropdown-menu{ margin-top:0; }
+	}
+	/* ============ desktop view .end// ============ */
+</style>
+<link rel="stylesheet" href="css/jquery-ui.css">
+<!--
+	<link rel="stylesheet" href="/resources/demos/style.css">
+
+-->
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+$( function() {
+	var availableTags = [###tags###];
+	$( "#num_ticket_d" ).autocomplete({
+		source: availableTags
+	});
+} );
+
+
+
+</script>
+
+</head>
+<body class="bg">
+@@@MENU
+<div style="text-align: center;">
+	<br>
+	<div class="container">
+			<div id="multiverso" >
+				@@@CONTENT
+			</div>
+	</div>
+<br>
+<br>
+
+</div >
+<hr>
+<div class="footer2">
+	<i class="fas fa-copyright"></i> Sistema de Tickets y Soporte <strong>Imatek.cl</strong>, 2023
+</div>
+
+</body>
+</html>
+<script>
+		//ejemplo encode
+	const loading = '<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>';
+	
+	//const loading = '<img src="gfx/gif.gif" width="70%">';
+	$('#home').click( 'click', (e) => {
+		$('#multiverso').html(loading) ;
+		return true ;
+	} ) ;
+
+	$('#salir-sistema').click( 'click', (e) => {
+		$('#multiverso').html(loading) ;
+		return true ;
+	} )
+
+	$('#refresh-centros').click( 'click', (e) => {
+		$('#multiverso').html(loading) ;
+		return true ;
+	} )
+
+</script>
