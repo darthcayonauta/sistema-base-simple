@@ -51,22 +51,7 @@ class ContentPage
 	{
 		switch ($this->id)
 		{	
-			case 'centro-pontones':
-			case 'crear-centro':
-			case 'lista-centros':
-			case 'crear-ponton':
-			case 'lista-pontones':
-			case 'crear-usuario':
-			case 'listar-usuarios':
-			case 'estadisticas':
-			case 'crear-tickets-camanchaca':
-			case 'crear-tickets-blumar':
-			case 'accesos' :
-			case 'cambiar-clave-cliente':
-			case 'cambiar-clave-imatek':
-			case 'inicio-imatek' :
-			case 'crear-ticket-admin' :
-			case 'crear-ticket' :
+
 			case 'inicio':
 
 				return $this::baseHtml();
@@ -90,15 +75,13 @@ class ContentPage
 
 			//$nombre = ($this->tipo_usuario == 1) ? $this->nombre : "{$this->nombres} {$this->apellidos}";
 
-			$tags   = ($this->tipo_usuario == 1) ? null : $this::tags() ;
-
 
 			$data = ['@@@TITLE'  	=> 'Sistema de Tickets',
 					 '@@@USER' 		=> null,
 					 '@@@FECHA' 	=> $this::arreglaFechas(  $this->fecha_hoy ),
 					 '@@@CONTENT'	=> $content,
 					 '@@@MENU'      => $this->menu->getCode() ,
-					 '###tags###'   => $tags 
+					 '###tags###'   => null 
 			];
 
 			return $this::despliegueTemplate($data,'inicio-principal.html');
@@ -122,19 +105,6 @@ class ContentPage
 	}
 
 
-	public function tags(){
-		try {
-			//code...
-			require_once('tickets.class.php') ;
-			$obj = new Tickets() ;
-			return $obj->tags() ;
-
-		} catch (\Throwable $th) {
-			//throw $th;
-			return "Error de clase {$th}";
-		}
-	}
-
     /**
      * importaModulos()
      * @param
@@ -145,51 +115,6 @@ class ContentPage
 
       switch ($this->id) {
 
-			case 'centro-pontones':
-
-				return $this::generalCall('centro-ponton.class.php','CentroPonton',$this->id);
-				break;
-
-
-			case 'crear-centro':
-			case 'lista-centros':
-				# code...
-				return $this::generalCall('cliente.class.php','Cliente',$this->id);
-				break;
-
-			case 'crear-ponton':
-			case 'lista-pontones':
-				# code...
-				return $this::generalCall('ponton.class.php','Ponton',$this->id);
-				break;
-
-			case 'estadisticas':
-				# code...
-				return $this::generalCall('estadisticas.class.php', 'Estadisticas', $this->id);
-				break;
-
-			case 'accesos':
-
-				return $this::generalCall('accesos.class.php','Accesos' , $this->id) ;
-				break ;
-
-			case 'crear-usuario':
-			case 'listar-usuarios':
-			case 'cambiar-clave-cliente':
-			case 'cambiar-clave-imatek':
-				# code...
-				return $this::generalCall('usuarios.class.php','Usuarios' , $this->id) ;
-				break;
-
-			case 'crear-tickets-camanchaca':
-			case 'crear-tickets-blumar':
-			case 'crear-ticket-admin':
-			case 'crear-ticket':
-				return $this::generalCall( 'tickets.class.php',
-										   'Tickets', $this->id );
-			break;
-			
-			case 'inicio-imatek' :
 			case 'inicio':
 				return $this::generalCall( 'principal.class.php',
 										   'Principal', $this->id );
