@@ -40,12 +40,16 @@ class response
  * @return String
  */
 	private function obtenerContenidoClaseOption($file_class=null,$class=null){
+	   try {
 
-	   include($file_class);
+			require_once($file_class);
 
-	   $obj_class  = new $class( $this->id);
-	   return $obj_class->getCode();
-
+			$obj_class  = new $class( $this->id);
+			return $obj_class->getCode();
+	   } catch (\Throwable $th) {
+		//throw $th;
+		return null ;
+	   }
 	}
 
 	public function getCode(){
