@@ -1,7 +1,7 @@
 # sistema-base-simple
 añadiendo contenido para sistema base simple
 
-#lenguajes soportados en plataforma
+# lenguajes soportados en plataforma
 1. PHP
 2. Javascript
 
